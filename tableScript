@@ -1,0 +1,24 @@
+CREATE TABLE hotelDetails(
+	id number primary key, 
+	name varchar2(30),
+	rating varchar2(10),
+	rate number(8,2),
+	availablerooms number
+	) 
+CREATE TABLE bookingDetails(
+	id number primary key, 
+	customername varchar2(30),
+	hotelid number,
+	todate date,
+	fromdate date,
+	noofrooms number
+	)	
+	
+	insert into hotelDetails values(1,'Hilton Hotel','3 Star',7572,20);
+	insert into hotelDetails values(2,'Vivanta by TAJ','5 Star',18000,12);
+	insert into hotelDetails values(3,'New Ginger Resort','3 Star',6000,15);
+	insert into hotelDetails values(4,'Woodlands Hotel','5 Star',35000,25);
+	
+	 create sequence booking_id
+	increment by 1
+	start with 1;
